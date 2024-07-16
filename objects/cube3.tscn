@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://b87q322a8afp8"]
+
+[ext_resource type="PackedScene" uid="uid://dn4u4i6irm2im" path="res://objects/cubopes.tscn" id="1_s7jh0"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_isf48"]
+bounce = 0.5
+
+[node name="RigidBody2D" instance=ExtResource("1_s7jh0")]
+position = Vector2(0, 0)
+mass = 56.76
+physics_material_override = SubResource("PhysicsMaterial_isf48")
+
+[node name="ColorRect" parent="CollisionShape2D" index="0"]
+color = Color(0.596078, 0.560784, 0.478431, 1)

@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://cobqc21a45awh"]
+
+[ext_resource type="PackedScene" uid="uid://b87q322a8afp8" path="res://objects/cube3.tscn" id="1_60ubg"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_spgmq"]
+friction = 0.7
+bounce = 0.8
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xbkir"]
+size = Vector2(40.5, 40)
+
+[node name="cube4" type="Node2D"]
+
+[node name="RigidBody2D" parent="." instance=ExtResource("1_60ubg")]
+mass = 1.95
+physics_material_override = SubResource("PhysicsMaterial_spgmq")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(20, 20)
+rotation = 0.837758
+shape = SubResource("RectangleShape2D_xbkir")
+one_way_collision_margin = 1.2
+
+[node name="ColorRect" type="ColorRect" parent="RigidBody2D/CollisionShape2D2"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+color = Color(0.435294, 0.882353, 0.356863, 1)
+metadata/_edit_use_anchors_ = true

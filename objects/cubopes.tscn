@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://dn4u4i6irm2im"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_1wtmj"]
+friction = 0.71
+bounce = 0.35
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_beg8m"]
+size = Vector2(40.5, 40)
+
+[node name="RigidBody2D" type="RigidBody2D"]
+position = Vector2(301, 138)
+physics_material_override = SubResource("PhysicsMaterial_1wtmj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(20, 20)
+rotation = 0.837758
+shape = SubResource("RectangleShape2D_beg8m")
+one_way_collision_margin = 1.2
+
+[node name="ColorRect" type="ColorRect" parent="CollisionShape2D"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+color = Color(1, 1, 0.878431, 1)
+metadata/_edit_use_anchors_ = true

@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://s7cxr243bi2"]
+
+[ext_resource type="Script" path="res://objects/deleter.gd" id="1_6dapl"]
+[ext_resource type="Script" path="res://objects/RigidBody2D.gd" id="2_ab7wn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2aawr"]
+
+[node name="deleter" type="Node2D"]
+script = ExtResource("1_6dapl")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+script = ExtResource("2_ab7wn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource("RectangleShape2D_2aawr")
+
+[node name="ColorRect" type="ColorRect" parent="RigidBody2D/CollisionShape2D"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(12.6314, 3.82663)
+color = Color(1, 0, 0, 1)
